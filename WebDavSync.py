@@ -103,13 +103,13 @@ def WebDavSyncWorker():
 
 							response = d.put(target_url,content)
 							d.close()								
-					except Exception, e:
-						print e
+					except Exception as e:
+						print (e)
 					finally:
 						d.close()
 
-			except Exception, e:
-				print e
+			except Exception as e:
+				print (e)
 			finally:
 				# this task is ready		
 				WebDavSyncQueue.task_done()

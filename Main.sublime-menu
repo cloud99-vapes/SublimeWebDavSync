@@ -1,13 +1,13 @@
 [
     {
         "caption": "Tools",
-        "mnemonic": "t",
+        "mnemonic": "T",
         "id": "tools",
         "children":
         [
             {
                 "caption": "WebDavSync",
-                "mnemonic": "w",
+                "mnemonic": "W",
                 "id": "webdavsync",
                 "children":
                 [
