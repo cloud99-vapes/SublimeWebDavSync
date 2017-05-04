@@ -73,11 +73,7 @@ def WebDavSyncWorker():
 							retryCount = 0
 							while retryCount < 10:
 								retryCount = retryCount + 1
-								body = '<?xml version="1.0" encoding="utf-8" ?>' + \
-								'<D:propfind xmlns:D="DAV:">' + \
-								'<D:prop xmlns:R="%s">' % test_url + \
-								'</D:prop>' + \
-								'</D:propfind>'
+								body = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><propfind xmlns="DAV:"><allprop/></propfind>'
 
 								result = d.propfind(test_url,depth=0, body=body)
 								result.read()
