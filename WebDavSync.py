@@ -48,6 +48,7 @@ def WebDavSyncWorker():
 
 			try:
 				source_path = item["source_path"]
+				local_subdir = item["local_subdir"]
 
 				source_folder = None
 
@@ -58,7 +59,7 @@ def WebDavSyncWorker():
 
 				if source_folder != None:
 
-					target_path = item["path"] + source_path[len(source_folder):]
+					target_path = item["path"] + source_path[len(source_folder) + len(local_subdir):]
 
 					target_url = "{0}://{1}{2}".format(item["protocol"], item["host"], target_path).replace("\\","/")
 
@@ -158,6 +159,7 @@ class WebDavSync(sublime_plugin.EventListener):
 		item["username"] = settings.get("username")
 		item["password"] = settings.get("password")
 		item["path"] = settings.get("path")
+		item["local_subdir"] = settings.get("local_subdir")
 		item["source_path"] = source_path
 		item["folders"] = view.window().folders()
 
