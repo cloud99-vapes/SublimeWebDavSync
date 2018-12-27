@@ -36,7 +36,7 @@ Create a ```*.sublime-project``` file (see http://www.sublimetext.com/docs/2/pro
             "host":"yourwebdavhost.com",
             "protocol":"https",
             "path":"/path/to/your/webdav/root",
-            "local_subdir":""
+            "local_subdir":"",
             "username":"yourusername",
             "password":"yourpassword"
         }
